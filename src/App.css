@@ -1,0 +1,129 @@
+.App{
+  background-color: #cfd0ba;
+  display:flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+  font-weight: 50;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+.flap {
+  width: 100%;
+  height: 100%;
+}
+
+.flap::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background-position: 100px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.flap::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background-position: -200px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+
+/* card */
+.Card {
+  height: 100vh;
+  width: 100vw;
+  display : flex;
+  /* box-shadow: 0 0 20px 8px #399077; */
+  border-radius: 5px;
+  border-color: #02082e ;  
+}
+
+/* for pagination */
+.pagination {
+  background-color: #de9ed5 ;
+  margin: 15px auto;
+  list-style: none;
+  outline: none;
+  display : flex;
+}
+.pagination > .active > a{
+  background-color: #1a118f ;
+  border-color: #04106d ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #090c6f ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #96e0e8 ;
+  border-color: #045b65 ;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #090c6f ;
+
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
+}
+/* for card */
+.Card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+  /* border-radius: 5px; */
+  border-radius: 0.3rem;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 100%;
+}
+ 
+
+/* for regexsearch
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+} */
+
+/* .Card {
+  height: 100vh;
+  width: 150vw;
+  display : flex;
+  flexDirection : column;
+  alignItems : center;
+  justifyContent : center;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+} */
